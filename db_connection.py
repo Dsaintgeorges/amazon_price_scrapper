@@ -2,7 +2,7 @@ import psycopg2
 
 
 
-conn_string = "dbname=amazon_scrapping user=postgres password=postgres host=db port=5432"
+conn_string = "dbname=amazon_scrapping user=postgres password=postgres host=db port=5433"
 
 list_of_data = []
 
