@@ -12,6 +12,7 @@ url_list = db_connection.select_data()
 
 
 def update_price():
+    print("update_price")
     for index, url in enumerate(url_list):
         product_url = url[1]
         product_price = url[2]

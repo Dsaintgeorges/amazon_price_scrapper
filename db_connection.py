@@ -2,7 +2,7 @@ import psycopg2
 
 
 
-conn_string = "dbname=amazon_scrapping user=postgres password=host=db port=5432"
+conn_string = "dbname=amazon_scrapping user=postgres password=postgres host=db port=5432"
 
 list_of_data = []
 
@@ -54,3 +54,5 @@ def create_table():
     cur.execute("CREATE TABLE IF NOT EXISTS products(id SERIAL PRIMARY KEY, url TEXT, current_price INTEGER, "
                 "lowest_price INTEGER, highest_price INTEGER, link TEXT)")
     conn.commit()
+    cur.close()
+    conn.close()
